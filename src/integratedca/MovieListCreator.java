@@ -16,7 +16,7 @@ import java.util.List;
  *
  * @author danie
  */
-public class MovieList {
+public class MovieListCreator {
     
   private List<Movie> movies;
 
@@ -26,7 +26,7 @@ public class MovieList {
   
   
     
-  public  void createListFrom(String filename) throws IOException{
+  public void createListFrom(String filename) throws IOException{
         
         String line;
      
@@ -36,11 +36,12 @@ public class MovieList {
           try{
         
             BufferedReader myReader = new BufferedReader(new FileReader(filename));
+            //skips first line
+            myReader.readLine();
             while((line = myReader.readLine())!= null){
             String[] values  = line.split (",");
                 Movie movie = createMovie(values);
                 movies.add(movie);
-                System.out.println(movie);
            
                 
             }

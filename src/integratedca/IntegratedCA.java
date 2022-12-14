@@ -23,10 +23,10 @@ public class IntegratedCA {
      */
     public static void main(String[] args) throws IOException{
    
-    MovieList movieList= new MovieList();
+    MovieListCreator movieList= new MovieListCreator();
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
-        System.out.println(movieList.getMovies().get(1));
+        System.out.println(movieList.getMovies().get(0));
     
 
 }}
