@@ -2,6 +2,7 @@
 
 package integratedca;
 
+import static integratedca.Movie.createMovie;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -22,6 +23,10 @@ public class IntegratedCA {
      */
     public static void main(String[] args){
         //Reads the file
+        
+        
+        
+        
 //        BufferedReader myReader = new BufferedReader(new FileReader("MovieMetadataEdited2.csv"));
 //        String line = myReader.readLine();
          //Splits the file into columns
@@ -47,23 +52,23 @@ public class IntegratedCA {
 //            //Prints the first element of the array
 ////            System.out.println(lineArr[0]);
 //        }
-        
-        List<String[]> generalList;
-        try {
-            generalList = InputValidation.validateInput("moviesmetadataedited.csv");
-             for(String[] s: generalList) {
-            System.out.println(s[0]);
-            System.out.println(s[1]);
-//            System.out.println(s[3]);
-//            System.out.println(s[4]);
-                     
-
-        }
-
-        } catch (IOException ex) {
-            Logger.getLogger(IntegratedCA.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+//        
+//        List<String[]> generalList;
+//        try {
+//            generalList = InputValidation.validateInput("moviesmetadataedited.csv");
+//             for(String[] s: generalList) {
+//            System.out.println(s[0]);
+//            System.out.println(s[1]);
+////            System.out.println(s[3]);
+////            System.out.println(s[4]);
+//                     
+//
+//        }
+//
+//        } catch (Exception e) {
+//            System.out.println("error reading the file");
+//        }
+//        
         /*
         List<MOvie> list = new ArrayList()<>;
         
@@ -94,10 +99,45 @@ public class IntegratedCA {
 //System.out.println(list + " ::: " + movie);
 //                }
                 
+//                
+//            }
+//            
+//        }
+
+  System.out.println("test");
+        String line;
+     
+        List<Movie> movies = new ArrayList<>();
+        
+       
+        // create and return book of this metadata return new Book(name, price, author); }
+
+        
+        
+        try{
+        
+            BufferedReader myReader = new BufferedReader(new FileReader("src/moviesmetadataedited.csv"));
+            while((line = myReader.readLine())!= null){
+            String[] values  = line.split (",");
+                Movie movie = createMovie(values);
+                movies.add(movie);
+                System.out.println(movie);
+           
                 
             }
             
+               
         }
+        catch(IOException e){
+            System.out.println("error reading the file");
+        }
+        
+        System.out.println(movies);
+       
+    }
+   
+}
+
         
   //  }
 //                System.out.println(movieList.get(list)[movie]);
