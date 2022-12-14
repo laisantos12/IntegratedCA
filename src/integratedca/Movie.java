@@ -55,7 +55,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" +  "original_title=" + original_title +  ", release_date=" + release_date + ", runtime=" + runtime + ", tagline=" + tagline + ", vote_average=" + vote_average + ", price=" + price + '}';
+        return "Movie{" +  "original_title: " + original_title +  ", release_date: " + release_date + ", runtime: " + runtime + ", tagline: " + tagline + ", vote_average: " + vote_average + ", price: " + price + ".";
     }
     
     
