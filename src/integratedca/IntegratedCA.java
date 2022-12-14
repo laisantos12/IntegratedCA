@@ -1,5 +1,4 @@
 
-
 package integratedca;
 
 import static integratedca.Movie.createMovie;
@@ -18,17 +17,13 @@ import java.util.logging.Logger;
  */
 public class IntegratedCA {
 
-    public static void main(String[] args) throws IOException{
-   
-    MovieListCreator movieList= new MovieListCreator();
+  public static void main(String[] args) throws IOException {
+
+    MovieListCreator movieList = new MovieListCreator();
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
-    //how to return object
-      System.out.println(movieList.getMovies());
-    
+    // how to return object
+    System.out.println(movieList.getMovies().get(0).getOriginal_title());
 
-    }
+  }
 }
-
-   
- 

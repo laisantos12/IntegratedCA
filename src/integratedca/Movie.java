@@ -18,8 +18,13 @@ public class Movie {
     String vote_average;
     String price;
 
+<<<<<<< HEAD
     public Movie(int id, String original_title, String release_date, String runtime, String tagline, String vote_average, String price) {
         this.id = id;
+=======
+    public Movie(int id,String original_title, String release_date, String runtime, String tagline, String vote_average, String price) {
+        this.id= id;
+>>>>>>> 25b5c85bace4b950a3ef9b44e5316b22623b53bf
         this.original_title = original_title;
         this.release_date = release_date;
         this.runtime = runtime;
@@ -27,6 +32,7 @@ public class Movie {
         this.vote_average = vote_average;
         this.price = price;
     }
+
 
 
     public String getOriginal_title() {
@@ -56,6 +62,7 @@ public class Movie {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "*---Catalog---*\n" +  "ID: " + id + "\n"+ "Title: " + original_title + 
                 "\n" + "Release Date: " + release_date +"\n" + "Runtime: " 
                 + runtime + "\n"+"Tagline: " + tagline + "\n" + "Vote Average: " 
@@ -63,6 +70,14 @@ public class Movie {
     }
     
     public static Movie createMovie(int idApplier,String[] metadata) { 
+=======
+        return "Movie{" +  "id: " + id +", original_title: " + original_title +  ", release_date: " + release_date + ", runtime: " + runtime + ", tagline: " + tagline + ", vote_average: " + vote_average + ", price: " + price + ".";
+    }
+    
+    
+    
+     public static Movie createMovie(int idApplier,String[] metadata) { 
+>>>>>>> 25b5c85bace4b950a3ef9b44e5316b22623b53bf
     int id= idApplier;
     String original_title = metadata[0];
     String release_date = metadata[1];
