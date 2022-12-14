@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package integratedca;
 
 import static integratedca.Movie.createMovie;
@@ -38,10 +34,13 @@ public class MovieListCreator {
             BufferedReader myReader = new BufferedReader(new FileReader(filename));
             //skips first line
             myReader.readLine();
+            int id = 0;
             while((line = myReader.readLine())!= null){
             String[] values  = line.split (",");
-                Movie movie = createMovie(values);
-                movies.add(movie);
+                
+            Movie movie = createMovie(id, values);
+            id++;
+            movies.add(movie);
            
                 
             }
