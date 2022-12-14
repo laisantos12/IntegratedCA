@@ -26,6 +26,7 @@ public class IntegratedCA {
     MovieList movieList= new MovieList();
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
+        System.out.println(movieList.getMovies().get(1));
     
 
 }}

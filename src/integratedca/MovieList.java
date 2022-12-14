@@ -18,7 +18,15 @@ import java.util.List;
  */
 public class MovieList {
     
-  public static List<Movie> createListFrom(String filename) throws IOException{
+  private List<Movie> movies;
+
+    public List<Movie> getMovies() {
+        return movies;
+    }
+  
+  
+    
+  public  void createListFrom(String filename) throws IOException{
         
         String line;
      
@@ -43,6 +51,6 @@ public class MovieList {
             System.out.println("error reading the file");
         }
         
-        return movies;
+        this.movies = movies;
     }
 }
