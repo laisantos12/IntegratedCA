@@ -10,6 +10,7 @@ package integratedca;
  * @author danie
  */
 public class Movie {
+    int id;
     String original_title;
     String release_date;
     String runtime;
@@ -17,8 +18,8 @@ public class Movie {
     String vote_average;
     String price;
 
-    public Movie(String original_title, String release_date, String runtime, String tagline, String vote_average, String price) {
- 
+    public Movie(int id,String original_title, String release_date, String runtime, String tagline, String vote_average, String price) {
+        this.id= id;
         this.original_title = original_title;
         this.release_date = release_date;
         this.runtime = runtime;
@@ -26,6 +27,7 @@ public class Movie {
         this.vote_average = vote_average;
         this.price = price;
     }
+
 
 
     public String getOriginal_title() {
@@ -55,18 +57,20 @@ public class Movie {
 
     @Override
     public String toString() {
-        return "Movie{" +  "original_title: " + original_title +  ", release_date: " + release_date + ", runtime: " + runtime + ", tagline: " + tagline + ", vote_average: " + vote_average + ", price: " + price + ".";
+        return "Movie{" +  "id: " + id +", original_title: " + original_title +  ", release_date: " + release_date + ", runtime: " + runtime + ", tagline: " + tagline + ", vote_average: " + vote_average + ", price: " + price + ".";
     }
     
     
-     public static Movie createMovie(String[] metadata) { 
+    
+     public static Movie createMovie(int idApplier,String[] metadata) { 
+    int id= idApplier;
     String original_title = metadata[0];
     String release_date = metadata[1];
     String runtime = metadata[2];
     String tagline= metadata[3];
     String vote_average=metadata[4];
     String price=metadata[5];
-    return new Movie(original_title,release_date,runtime,tagline,vote_average,price);
+    return new Movie( id ,original_title,release_date,runtime,tagline,vote_average,price);
      }
     
      
