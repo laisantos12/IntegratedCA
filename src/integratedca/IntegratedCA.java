@@ -23,7 +23,8 @@ public class IntegratedCA {
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
     // how to return object
-    System.out.println(movieList.getMovies());
+    //System.out.println(movieList.getMovies());
+    movieList.getMovies().forEach(System.out::println);
 
   }
 }
