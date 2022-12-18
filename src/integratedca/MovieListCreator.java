@@ -38,7 +38,6 @@ public class MovieListCreator {
             int id = 0;
             while((line = myReader.readLine())!= null){
             String[] values  = line.split (",");
-            System.out.println(line);
                 
             Movie movie = createMovie(id, values);
             id++;
