@@ -60,8 +60,8 @@ public class Movie {
 
         return "*---Catalog---*\n" +  "ID: " + id + "\n"+ "Title: " + original_title + 
                 "\n" + "Release Date: " + release_date +"\n" + "Runtime: " 
-                + runtime + "\n"+"Tagline: " + tagline + "\n" + "Vote Average: " 
-                + vote_average +"\n"+ "Price: " + price + "."+"\n";
+                + runtime + " min"+"\n"+"Tagline: " + tagline + "\n" + "Vote Average: " 
+                + vote_average +"\n"+ "Price: " +"€ "+ price +"\n";
     }
     
   
@@ -71,12 +71,16 @@ public class Movie {
      public static Movie createMovie(int idApplier,String[] metadata) { 
 
     int id= idApplier;
+    int lastData = metadata.length;
     String original_title = metadata[0];
     String release_date = metadata[1];
     String runtime = metadata[2];
     String tagline= metadata[3];
-    String vote_average=metadata[4];
-    String price=metadata[5];
+    for(int i = 4; i<lastData -2; i++){
+        tagline = tagline + "," + metadata[i];
+    }
+    String vote_average = metadata[lastData -2];
+    String price = metadata[lastData -1];
     return new Movie( id ,original_title,release_date,runtime,tagline,vote_average,price);
      }
     

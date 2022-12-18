@@ -5,10 +5,9 @@
         <group>
             <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/IntegratedCA.java</file>
             <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/ListInputInterface.java</file>
-            <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/ConsoleOutput.java</file>
-            <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/ListOutputInterface.java</file>
+            <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/MovieListCreator.java</file>
             <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/ListFileInput.java</file>
-            <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/InputValidation.java</file>
+            <file>file:/Users/layhenececilio/NetBeansProjects/IntegratedCA/src/integratedca/Movie.java</file>
         </group>
     </open-files>
 </project-private>
