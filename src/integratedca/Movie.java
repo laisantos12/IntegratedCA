@@ -29,21 +29,7 @@ public class Movie {
         this.price = price;
     }
 
-    private static final int RENTDURATION = 5000;
-
-    private long activatedAt = Long.MAX_VALUE;
-
-    public void activate() {
-        activatedAt = System.currentTimeMillis();
-    }
-
-    public boolean isActive() {
-
-        long activeFor = System.currentTimeMillis() - activatedAt;
-
-        return activeFor >= 0 && activeFor <= RENTDURATION;
-    }
-
+   
     public String getOriginal_title() {
         return original_title;
     }
