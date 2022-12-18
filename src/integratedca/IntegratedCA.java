@@ -1,15 +1,7 @@
 
 package integratedca;
 
-import static integratedca.Movie.createMovie;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -23,8 +15,11 @@ public class IntegratedCA {
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
     // how to return object
-    //System.out.println(movieList.getMovies());
-    movieList.getMovies().forEach(System.out::println);
-
+      System.out.println("Welcome to ÉirVid streaming ");
+     
+    
+        movieList.getMovies().forEach(System.out::println);
   }
+  
+  
 }
