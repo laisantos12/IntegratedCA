@@ -65,13 +65,13 @@ public class RentMovies {
             }
             case 3:{
                 
-                System.out.println("Here are some movie suggestions:\n");
+                System.out.println("Here are some movie suggestions: \n");
                 suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
                 System.out.println(suggestions.getSuggestions());
                 break;
             }
             case 4:{
-                System.out.println("Here are the movies you rented\n");
+                System.out.println("\nHere are the movies you rented\n");
                 System.out.println(rentedMovieList.getRentedMovies());
                 System.out.println("\nThank you for chosen us.");
             }
