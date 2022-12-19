@@ -25,11 +25,15 @@ public class Login {
 
     public void login() {
         do {
-            System.out.println("\nWelcome to EirVid - From Your RTE Player."
+            String firstMenu = ("\nWelcome to EirVid - From Your RTE Player."
                     + "\nPlease Select:"
                     + "\n1 - Login"
                     + "\n2 - Create an account");
+            
+            System.out.println(firstMenu);
+            
             option = input.nextInt();
+            
             switch (option) {
                 case 1:
                     System.out.println("Please enter your email: ");

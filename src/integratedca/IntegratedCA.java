@@ -26,8 +26,6 @@ public class IntegratedCA {
     //System.out.println( movieList.getMovies());
     //movieList.getMovies().forEach(System.out::println);
     
-    //Login login = new Login();
-    //login.login();
 //    suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
     //suggestions.getSuggestions();
     //  System.out.println(suggestions.getSuggestions());

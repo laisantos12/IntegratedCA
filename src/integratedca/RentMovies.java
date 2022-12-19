@@ -34,18 +34,24 @@ public class RentMovies {
     
     
      public void rentMovie() throws IOException{
+         
         boolean end;
+        int selected;
         do{
              end=false;
-            movieList.createListFrom("src/moviesmetadataedited.csv");
-            System.out.println("\nWelcome to EirVid - From Your RTE Player."
+           // movieList.createListFrom("src/moviesmetadataedited.csv");
+            
+            String secondMenu = ("\nWelcome to EirVid - From Your RTE Player."
                 + "\nPlease Select:"
                 + "\n1 - Rent a Movie"
                 + "\n2 - My Renteded Movies"
                 + "\n3 - Recomendations"
                 + "\n4 - Exit");
+            
+            System.out.println(secondMenu);
+            selected = input.nextInt();
         
-        switch(input.nextInt()){
+        switch(selected){
             case 1 : {
             
                 movieList.getMovies().forEach(System.out::println);
