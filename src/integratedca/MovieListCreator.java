@@ -50,7 +50,7 @@ public class MovieListCreator {
         catch(IOException e){
             System.out.println("error reading the file");
         }
-        
-        this.movies = movies;
+                this.movies = movies;
+
     }
 }
