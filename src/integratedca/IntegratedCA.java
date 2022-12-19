@@ -2,6 +2,7 @@
 package integratedca;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *
@@ -21,11 +22,16 @@ public class IntegratedCA {
     
    // Login login = new Login();
    // login.login();
-      System.out.println(movieList.getMovies().get(1));
+      //System.out.println(movieList.getMovies().get(1));
       //added a movie to the rentedMovieList
+      
+      rentedMovieList.addMovieToRentedList(movieList.getMovies().get(2));
+
       rentedMovieList.addMovieToRentedList(movieList.getMovies().get(1));
+
       //return the list of rented movies
       System.out.println(rentedMovieList.getRentedMovies());
+      System.out.println(rentedMovieList.numberOfMoviesRented());
      
        
       

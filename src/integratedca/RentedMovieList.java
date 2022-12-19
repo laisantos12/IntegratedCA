@@ -14,22 +14,23 @@ import java.util.List;
  * @author danie
  */
 public class RentedMovieList {
-    
-     private List<Movie> rentedMovies;
-    
-      public List<Movie> getRentedMovies() {
+
+    private final List<Movie> rentedMovies = new ArrayList<>();
+
+    public List<Movie> getRentedMovies() {
         return rentedMovies;
     }
-  
-  
-    
-  public void addMovieToRentedList(Movie movie) throws IOException{
+
+    public int numberOfMoviesRented() {
+        return rentedMovies.size();
+    }
+
+    public void addMovieToRentedList(Movie movie) throws IOException {
+
      
-        List<Movie> rentedMovies = new ArrayList<>();
         rentedMovies.add(movie);
-        
-        this.rentedMovies = rentedMovies;
-        
-  }
-  
+
+      
+    }
+
 }
