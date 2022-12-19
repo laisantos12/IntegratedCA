@@ -34,7 +34,9 @@ public class RentMovies {
     
     
      public void rentMovie() throws IOException{
+        boolean end;
         do{
+             end=false;
             movieList.createListFrom("src/moviesmetadataedited.csv");
             System.out.println("\nWelcome to EirVid - From Your RTE Player."
                 + "\nPlease Select:"
@@ -52,16 +54,24 @@ public class RentMovies {
                 break;
             }
             case 2: {System.out.println(rentedMovieList.getRentedMovies());
+            break;
             }
             case 3:{
+                
+                System.out.println("Here are some movie suggestions");
                 suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
                 System.out.println(suggestions.getSuggestions());
+                break;
             }
+            case 4:
+                end=true;
+                break;
+            
             
         }
-            
+           
         
-      }while(true);
+      }while(end==false);
      }
     private static final int RENTDURATION = 60000;
 
