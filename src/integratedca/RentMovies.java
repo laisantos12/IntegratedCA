@@ -35,18 +35,19 @@ public class RentMovies {
     
      public void rentMovie() throws IOException{
          
-        boolean end;
+       
         int selected;
+        
         do{
-             end=false;
-           // movieList.createListFrom("src/moviesmetadataedited.csv");
+             
+            movieList.createListFrom("src/moviesmetadataedited.csv");
             
             String secondMenu = ("\nWelcome to EirVid - From Your RTE Player."
                 + "\nPlease Select:"
                 + "\n1 - Rent a Movie"
                 + "\n2 - My Renteded Movies"
                 + "\n3 - Recomendations"
-                + "\n4 - Exit");
+                + "\n4 - Check out & Exit");
             
             System.out.println(secondMenu);
             selected = input.nextInt();
@@ -64,20 +65,24 @@ public class RentMovies {
             }
             case 3:{
                 
-                System.out.println("Here are some movie suggestions");
+                System.out.println("Here are some movie suggestions:\n");
                 suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
                 System.out.println(suggestions.getSuggestions());
                 break;
             }
-            case 4:
-                end=true;
+            case 4:{
+                System.out.println("Here are the movies you rented\n");
+                System.out.println(rentedMovieList.getRentedMovies());
+                System.out.println("\nThank you for chosen us.");
+            }
+               
                 break;
             
             
         }
            
         
-      }while(end==false);
+      }while(selected != 4);
      }
     private static final int RENTDURATION = 60000;
 

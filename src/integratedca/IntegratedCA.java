@@ -33,9 +33,9 @@ public class IntegratedCA {
       //added a movie to the rentedMovieList
       
       
-      rentedMovieList.addMovieToRentedList(movieList.getMovies().get(2));
+      //rentedMovieList.addMovieToRentedList(movieList.getMovies().get(2));
 
-      rentedMovieList.addMovieToRentedList(movieList.getMovies().get(1));
+      //rentedMovieList.addMovieToRentedList(movieList.getMovies().get(1));
 
       //return the list of rented movies
       System.out.println(rentedMovieList.getRentedMovies());
