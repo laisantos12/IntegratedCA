@@ -4,7 +4,7 @@
  */
 package integratedca;
 
-
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -13,18 +13,21 @@ import java.util.Random;
  * @author tahro
  */
 public class SuggestedMovies {
-    List<Movie> suggestions = newArrayList<>();
+    List<Movie> suggestions= new ArrayList<>();  
     Random randomNum = new Random();
-    int nuumberOfSuggestions = 5;
-    
-    public List<Movie> getSuggestions() {
-        return suggestions;
-    }
-    
-    public void suggestedMovies(List<Movie> movies, int sizeOfTheMovieList){
-        for(int i=0;i<numberOfSuggestions;i++){
+    int numberOfSuggestions =5;
+  
+  
+        public List<Movie> getSuggestions() {
+            return suggestions;
+        }
+  
+  
+public void suggestedMovies(List<Movie> movies, int sizeOfTheMovieList){
+ 
+    for(int i=0;i<numberOfSuggestions;i++){
         suggestions.add(movies.get(randomNum.nextInt(sizeOfTheMovieList)));
-
-    }
-
+   }
+    
+}
 }
