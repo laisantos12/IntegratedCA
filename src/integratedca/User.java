@@ -15,13 +15,16 @@ import java.util.Random;
  */
 public class User {
     
-   //int userID;
+    int userID;
     String userEmail;
     String userPassword;
+    
+    private static int counter = 0;
     //String [] rentedMovies = null;
     
 
     public User(String userEmail, String userPassword) {
+        this.userID=counter++;
         this.userEmail = userEmail;
         this.userPassword = userPassword;
        // Random random = new Random();
@@ -30,6 +33,11 @@ public class User {
 
     public String getUserEmail() {
         return userEmail;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" + "userID=" + userID + ", userEmail=" + userEmail + ", userPassword=" + userPassword + '}';
     }
        
    
