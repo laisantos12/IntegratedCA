@@ -4,7 +4,6 @@
  */
 package integratedca;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -14,6 +13,7 @@ import java.util.Random;
  * @author tahro
  */
 public class SuggestedMovies {
+    
     List<Movie> suggestions = new ArrayList<>();
     Random randomNum = new Random();
     int numberOfSuggestions = 5;
@@ -27,5 +27,9 @@ public class SuggestedMovies {
         suggestions.add(movies.get(randomNum.nextInt(sizeOfTheMovieList)));
 
     }
-    }
+    
+
+ 
+
+}
 }
