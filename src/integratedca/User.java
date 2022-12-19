@@ -24,7 +24,7 @@ public class User {
     public User(String userEmail, String userPassword) {
         this.userEmail = userEmail;
         this.userPassword = userPassword;
-        Random random = new Random();
+       // Random random = new Random();
         //userID = random.nextInt();
     }
 

@@ -20,8 +20,9 @@ public class IntegratedCA {
     //System.out.println( movieList.getMovies());
     //movieList.getMovies().forEach(System.out::println);
     
-   // Login login = new Login();
-   // login.login();
+    Login login = new Login();
+    login.login();
+    
       //System.out.println(movieList.getMovies().get(1));
       //added a movie to the rentedMovieList
       
@@ -32,6 +33,9 @@ public class IntegratedCA {
       //return the list of rented movies
       System.out.println(rentedMovieList.getRentedMovies());
       System.out.println(rentedMovieList.numberOfMoviesRented());
+      //returns user
+      System.out.println(login.getUsers());
+      
      
        
       
