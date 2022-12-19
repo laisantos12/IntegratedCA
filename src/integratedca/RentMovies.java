@@ -30,10 +30,13 @@ public class RentMovies {
     
     RentedMovieList rentedMovieList= new RentedMovieList();
     
+    SuggestedMovies suggestions = new SuggestedMovies();
+    
     
      public void rentMovie() throws IOException{
         do{
-        System.out.println("\nWelcome to EirVid - From Your RTE Player."
+            movieList.createListFrom("src/moviesmetadataedited.csv");
+            System.out.println("\nWelcome to EirVid - From Your RTE Player."
                 + "\nPlease Select:"
                 + "\n1 - Rent a Movie"
                 + "\n2 - My Renteded Movies"
@@ -42,11 +45,7 @@ public class RentMovies {
         
         switch(input.nextInt()){
             case 1 : {
-            try {
-                movieList.createListFrom("src/moviesmetadataedited.csv");
-            } catch (IOException ex) {
-                Logger.getLogger(RentMovies.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            
                 System.out.println(movieList.getMovies());
                 System.out.println("Select the ID of the movie you would like to rent");
                 rentedMovieList.addMovieToRentedList(movieList.getMovies().get(input.nextInt()));
@@ -55,6 +54,8 @@ public class RentMovies {
             case 2: {System.out.println(rentedMovieList.getRentedMovies());
             }
             case 3:{
+                suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
+                System.out.println(suggestions.getSuggestions());
             }
             
         }

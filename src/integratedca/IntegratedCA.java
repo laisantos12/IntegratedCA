@@ -25,7 +25,7 @@ public class IntegratedCA {
     
     Login login = new Login();
     login.login();
-    //suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
+//    suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
     //suggestions.getSuggestions();
     //  System.out.println(suggestions.getSuggestions());
       //System.out.println(movieList.getMovies().get(1));
