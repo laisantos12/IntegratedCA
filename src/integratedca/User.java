@@ -19,7 +19,7 @@ public class User {
     String userEmail;
     String userPassword;
     //String [] rentedMovies = null;
-    List <RentMovies> rentedMovies = new ArrayList<>();
+    
 
     public User(String userEmail, String userPassword) {
         this.userEmail = userEmail;
@@ -32,16 +32,7 @@ public class User {
         return userEmail;
     }
        
-    public List<RentMovies> returnRentedMoviesList(){
-        return rentedMovies;
-    }
-    
-    public int checkLogIn(String userEmail,String userPassword){
-        if(userEmail.equals(this.userEmail)&&userPassword==this.userPassword)
-            return 1;
-        else{
-        return -1;}
-    }
-    
+   
+   
                   
 }

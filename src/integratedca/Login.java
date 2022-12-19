@@ -26,34 +26,36 @@ public class Login {
                 + "\n1 - Login"
                 + "\n2 - Create an account");
         option = input.nextInt();
-        if(option == 1){
-            System.out.println("Please enter your email: ");
-            email = input.next();
-            System.out.println("Please enter your password: ");
-            password = input.next();
-            User user = new User(email,password);
-            if(checkEmail(user.getUserEmail())){
-            System.out.println("You are logged sucessfully!!"
-            + "\n");
-            System.out.println(systemUsers);
-            } else {
-                System.out.println("Verify your credentials or create a new account!");
+            switch (option) {
+                case 1:
+                    System.out.println("Please enter your email: ");
+                    email = input.next();
+                    System.out.println("Please enter your password: ");
+                    password = input.next();
+                    User user = new User(email,password);
+                    if(checkEmail(user.getUserEmail())){
+                        System.out.println("You are logged sucessfully!!"
+                                + "\n");
+                        System.out.println(systemUsers);
+                    } else {
+                        System.out.println("Verify your credentials or create a new account!");
+                    }       break;
+                case 2:
+                    System.out.println("Please enter your email: ");
+                    email = input.next();
+                    System.out.println("Please enter your password: ");
+                    password = input.next();
+                    User newUser = new User(email, password);
+                    if(checkEmail(newUser.getUserEmail())){
+                        System.out.println("User is already in our system. Go to Login option");
+                    } else {
+                        systemUsers.add(newUser);
+                        System.out.println("You created your user successfully!!");
+                    }       break;
+                default:
+                    System.out.println("Please pick one valid option");
+                    break;
             }
-        }else if(option == 2){
-            System.out.println("Please enter your email: ");
-            email = input.next();
-            System.out.println("Please enter your password: ");
-            password = input.next();
-            User newUser = new User(email, password);
-            if(checkEmail(newUser.getUserEmail())){
-                System.out.println("User is already in our system. Go to Login option");
-            } else {
-            systemUsers.add(newUser);
-            System.out.println("You created your user successfully!!");
-            }
-        } else{
-            System.out.println("Please pick one valid option");
-        }
         }while(option>1 || option<3);
     }
     public boolean checkEmail(String email){
