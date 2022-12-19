@@ -1,5 +1,7 @@
 package integratedca;
 
+import java.util.Scanner;
+
 /**
  *
  * @author lsant
@@ -19,6 +21,27 @@ public class RentMovies {
 //        this.personRenting = personRenting;
 //        this.backDate = backDate;
 //    }
+    Scanner input = new Scanner(System.in);
+    
+    MovieListCreator movieList = new MovieListCreator();
+    
+     public void RentMovie(){
+        do{
+        System.out.println("\nWelcome to EirVid - From Your RTE Player."
+                + "\nPlease Select:"
+                + "\n1 - Rent a Movie"
+                + "\n2 - My Renteded Movies"
+                + "\n3 - Recomendations"
+                + "\n4 - Exit");
+        
+        switch(input.nextInt()){
+            case 1 : movieList.getMovies().forEach(System.out::println);
+            
+        }
+            
+        
+      }while(true);
+     }
     private static final int RENTDURATION = 60000;
 
     private long activatedAt = Long.MAX_VALUE;
@@ -54,10 +77,6 @@ public class RentMovies {
         return backDate;
     }
 
-//    @Override
-//    public String toString() {
-//        return "*---Rent---*" +  "Movie Id: " + id +  ", Date of Rent: " + date + ", ID Movie Rented: " + rentedMovieID + ", Client " + personRenting + ", Return Date: " + backDate + ".";
-//    }
     @Override
     public String toString() {
         System.out.println("*---Rent---*\n"

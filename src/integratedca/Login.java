@@ -22,7 +22,7 @@ public class Login {
     public void login(){
         do{
         System.out.println("\nWelcome to EirVid - From Your RTE Player."
-                + "\nPlease type:"
+                + "\nPlease Select:"
                 + "\n1 - Login"
                 + "\n2 - Create an account");
         option = input.nextInt();
