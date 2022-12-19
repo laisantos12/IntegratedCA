@@ -15,26 +15,12 @@ public class IntegratedCA {
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
     // how to return object
-      System.out.println("Welcome to ÉirVid streaming ");
-      
-      
+    //System.out.println( movieList.getMovies());
+    //movieList.getMovies().forEach(System.out::println);
     
-      //  movieList.getMovies().forEach(System.out::println);
-        
-        movieList.getMovies().get(0).activate();
-        
-        System.out.println(movieList.getMovies().get(0).isActive());
-        
-        MenuDisplay menu = new MenuDisplay();
-        
-        menu.displayMenu();
-        System.out.println("test");
-        
-        
-        System.out.println(movieList.getMovies().get(0).isActive());
-        
-        
-        
+    Login login = new Login();
+    login.login();
+    
   }
   
   

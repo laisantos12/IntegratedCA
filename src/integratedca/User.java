@@ -5,40 +5,43 @@
  */
 package integratedca;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 /**
  *
  * @author danie
  */
 public class User {
     
-    int userID;
-    String username;
+   //int userID;
+    String userEmail;
     String userPassword;
-    String [] rentedMovies = null;
-    
-    public String[] returnRentedMoviesList(){
+    //String [] rentedMovies = null;
+    List <RentMovies> rentedMovies = new ArrayList<>();
+
+    public User(String userEmail, String userPassword) {
+        this.userEmail = userEmail;
+        this.userPassword = userPassword;
+        Random random = new Random();
+        //userID = random.nextInt();
+    }
+
+    public String getUserEmail() {
+        return userEmail;
+    }
+       
+    public List<RentMovies> returnRentedMoviesList(){
         return rentedMovies;
     }
-
-    public User(String username, String userPassword) {
-        this.username = username;
-        this.userPassword = userPassword;
-    }
-
-    public int getUserID() {
-        return userID;
-    }
-
-    public String getUsername() {
-        return username;
+    
+    public int checkLogIn(String userEmail,String userPassword){
+        if(userEmail.equals(this.userEmail)&&userPassword==this.userPassword)
+            return 1;
+        else{
+        return -1;}
     }
     
-    
-//    public int checkLogIn(String userEmail,String userPassword){
-//        if(userEmail.equals(this.userEmail)&&userPassword==this.userPassword)
-//            return 1;
-//        else{
-//        return -1;}
-//    }
-            
+                  
 }
