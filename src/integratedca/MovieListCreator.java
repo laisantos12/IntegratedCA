@@ -20,6 +20,9 @@ public class MovieListCreator {
         return movies;
     }
   
+      public int numberOfMovies() {
+        return movies.size();
+    }
   
     
   public void createListFrom(String filename) throws IOException{

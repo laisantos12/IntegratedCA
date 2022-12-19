@@ -14,15 +14,18 @@ public class IntegratedCA {
 
     MovieListCreator movieList = new MovieListCreator();
     RentedMovieList rentedMovieList= new RentedMovieList();
+    SuggestedMovies suggestions = new SuggestedMovies();
 
     movieList.createListFrom("src/moviesmetadataedited.csv");
     // how to return object
     //System.out.println( movieList.getMovies());
     //movieList.getMovies().forEach(System.out::println);
     
-    Login login = new Login();
-    login.login();
-    
+//    Login login = new Login();
+//    login.login();
+    suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
+    suggestions.getSuggestions();
+      System.out.println(suggestions.getSuggestions());
       //System.out.println(movieList.getMovies().get(1));
       //added a movie to the rentedMovieList
       
@@ -34,7 +37,7 @@ public class IntegratedCA {
       System.out.println(rentedMovieList.getRentedMovies());
       System.out.println(rentedMovieList.numberOfMoviesRented());
       //returns user
-      System.out.println(login.getUsers());
+//      System.out.println(login.getUsers());
       
      
        
