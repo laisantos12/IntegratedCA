@@ -48,7 +48,7 @@ public class RentMovies {
         switch(input.nextInt()){
             case 1 : {
             
-                System.out.println(movieList.getMovies());
+                movieList.getMovies().forEach(System.out::println);
                 System.out.println("Select the ID of the movie you would like to rent");
                 rentedMovieList.addMovieToRentedList(movieList.getMovies().get(input.nextInt()));
                 break;
