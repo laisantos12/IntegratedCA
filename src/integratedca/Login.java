@@ -66,7 +66,7 @@ public class Login {
                     System.out.println("Please pick one valid option");
                     break;
             }
-        } while (option > 1 && option < 3);
+        } while (option != 2);
     }
 
     public boolean checkEmail(String email) {
