@@ -62,6 +62,8 @@ public class RentMovies {
                         movieList.getMovies().forEach(System.out::println);
                         System.out.println("Select the ID of the movie you would like to rent");
                         int movieID = input.nextInt();
+                        
+                                
                         System.out.println(movieList.numberOfMovies());
                        
                         while(movieID>movieList.numberOfMovies()){
