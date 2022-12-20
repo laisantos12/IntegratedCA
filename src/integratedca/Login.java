@@ -15,9 +15,15 @@ import java.util.Scanner;
 public class Login {
 
     Scanner input = new Scanner(System.in);
-    int option;
+    String option;
+    boolean loginVerified=false;
+    int optionValidated;
     String email, password;
     List<User> systemUsers = new ArrayList<>();
+    
+    InputValidation inputValidation = new InputValidation();
+    
+   
     
     public List<User> getUsers() {
         return systemUsers;
@@ -25,12 +31,19 @@ public class Login {
 
     public void login() {
         do {
-            System.out.println("\nWelcome to EirVid - From Your RTE Player."
+            String firstMenu = ("\nWelcome to EirVid - From Your RTE Player."
                     + "\nPlease Select:"
                     + "\n1 - Login"
                     + "\n2 - Create an account");
-            option = input.nextInt();
-            switch (option) {
+            
+            System.out.println(firstMenu);
+            
+            option = input.next();
+            
+            
+            if(inputValidation.InputValidationInt(option) == true){
+                optionValidated = Integer.parseInt(option);
+            switch (optionValidated) {
                 case 1:
                     System.out.println("Please enter your email: ");
                     email = input.next();
@@ -40,6 +53,7 @@ public class Login {
                     if (checkEmail(user.getUserEmail())) {
                         System.out.println("You are logged sucessfully!!"
                                 + "\n");
+                        loginVerified=true;
                         System.out.println(systemUsers);
                     } else {
                         System.out.println("Verify your credentials or create a new account!");
@@ -55,14 +69,17 @@ public class Login {
                         System.out.println("User is already in our system. Go to Login option");
                     } else {
                         systemUsers.add(newUser);
-                        System.out.println("You created your user successfully!!");
+                        System.out.println("You have created your account successfully!!");
+                        
+                    
                     }
                     break;
                 default:
                     System.out.println("Please pick one valid option");
                     break;
-            }
-        } while (option > 1 && option < 3);
+            }}
+            else{}
+        } while (loginVerified==false );
     }
 
     public boolean checkEmail(String email) {

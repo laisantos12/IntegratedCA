@@ -12,6 +12,9 @@ public class IntegratedCA {
 
   public static void main(String[] args) throws IOException {
       
+//    Login login = new Login();
+//    login.login();
+      
     RentMovies rentMovies= new RentMovies();
     rentMovies.rentMovie();
     MovieListCreator movieList = new MovieListCreator();
@@ -23,8 +26,6 @@ public class IntegratedCA {
     //System.out.println( movieList.getMovies());
     //movieList.getMovies().forEach(System.out::println);
     
-    Login login = new Login();
-    login.login();
 //    suggestions.suggestedMovies(movieList.getMovies(), movieList.numberOfMovies());
     //suggestions.getSuggestions();
     //  System.out.println(suggestions.getSuggestions());
@@ -32,15 +33,15 @@ public class IntegratedCA {
       //added a movie to the rentedMovieList
       
       
-      rentedMovieList.addMovieToRentedList(movieList.getMovies().get(2));
+      //rentedMovieList.addMovieToRentedList(movieList.getMovies().get(2));
 
-      rentedMovieList.addMovieToRentedList(movieList.getMovies().get(1));
+      //rentedMovieList.addMovieToRentedList(movieList.getMovies().get(1));
 
       //return the list of rented movies
       System.out.println(rentedMovieList.getRentedMovies());
       System.out.println(rentedMovieList.numberOfMoviesRented());
       //returns user
-      System.out.println(login.getUsers());
+//      System.out.println(login.getUsers());
       
 
 
