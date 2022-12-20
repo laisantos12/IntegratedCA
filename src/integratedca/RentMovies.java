@@ -61,7 +61,16 @@ public class RentMovies {
 
                         movieList.getMovies().forEach(System.out::println);
                         System.out.println("Select the ID of the movie you would like to rent");
-                        rentedMovieList.addMovieToRentedList(movieList.getMovies().get(input.nextInt()));
+                        int movieID = input.nextInt();
+                        System.out.println(movieList.numberOfMovies());
+                       
+                        while(movieID>movieList.numberOfMovies()){
+                            System.out.println("This option is out of range");
+                             System.out.println("Select the ID of the movie you would like to rent");
+                             movieID=input.nextInt();
+                             
+                        }
+                        rentedMovieList.addMovieToRentedList(movieList.getMovies().get(movieID));
                         break;
                     }
                     case 2: {

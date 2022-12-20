@@ -16,6 +16,7 @@ public class Login {
 
     Scanner input = new Scanner(System.in);
     String option;
+    boolean loginVerified=false;
     int optionValidated;
     String email, password;
     List<User> systemUsers = new ArrayList<>();
@@ -39,6 +40,7 @@ public class Login {
             
             option = input.next();
             
+            
             if(inputValidation.InputValidationInt(option) == true){
                 optionValidated = Integer.parseInt(option);
             switch (optionValidated) {
@@ -51,6 +53,7 @@ public class Login {
                     if (checkEmail(user.getUserEmail())) {
                         System.out.println("You are logged sucessfully!!"
                                 + "\n");
+                        loginVerified=true;
                         System.out.println(systemUsers);
                     } else {
                         System.out.println("Verify your credentials or create a new account!");
@@ -67,6 +70,8 @@ public class Login {
                     } else {
                         systemUsers.add(newUser);
                         System.out.println("You have created your account successfully!!");
+                        
+                    
                     }
                     break;
                 default:
@@ -74,7 +79,7 @@ public class Login {
                     break;
             }}
             else{}
-        } while (optionValidated != 2 );
+        } while (loginVerified==false );
     }
 
     public boolean checkEmail(String email) {

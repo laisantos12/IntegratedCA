@@ -12,8 +12,8 @@ public class IntegratedCA {
 
   public static void main(String[] args) throws IOException {
       
-    Login login = new Login();
-    login.login();
+//    Login login = new Login();
+//    login.login();
       
     RentMovies rentMovies= new RentMovies();
     rentMovies.rentMovie();
@@ -41,7 +41,7 @@ public class IntegratedCA {
       System.out.println(rentedMovieList.getRentedMovies());
       System.out.println(rentedMovieList.numberOfMoviesRented());
       //returns user
-      System.out.println(login.getUsers());
+//      System.out.println(login.getUsers());
       
 
 
