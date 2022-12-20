@@ -15,9 +15,14 @@ import java.util.Scanner;
 public class Login {
 
     Scanner input = new Scanner(System.in);
-    int option;
+    String option;
+    int optionValidated;
     String email, password;
     List<User> systemUsers = new ArrayList<>();
+    
+    InputValidation inputValidation = new InputValidation();
+    
+   
     
     public List<User> getUsers() {
         return systemUsers;
@@ -32,9 +37,11 @@ public class Login {
             
             System.out.println(firstMenu);
             
-            option = input.nextInt();
+            option = input.next();
             
-            switch (option) {
+            if(inputValidation.InputValidationInt(option) == true){
+                optionValidated = Integer.parseInt(option);
+            switch (optionValidated) {
                 case 1:
                     System.out.println("Please enter your email: ");
                     email = input.next();
@@ -59,14 +66,15 @@ public class Login {
                         System.out.println("User is already in our system. Go to Login option");
                     } else {
                         systemUsers.add(newUser);
-                        System.out.println("You created your user successfully!!");
+                        System.out.println("You have created your account successfully!!");
                     }
                     break;
                 default:
                     System.out.println("Please pick one valid option");
                     break;
-            }
-        } while (option != 2);
+            }}
+            else{}
+        } while (optionValidated != 2 );
     }
 
     public boolean checkEmail(String email) {
