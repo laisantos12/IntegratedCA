@@ -37,7 +37,7 @@ public class MovieListCreator {
             BufferedReader myReader = new BufferedReader(new FileReader(filename));
             //skips first line
             myReader.readLine();
-
+            //starts list id on 0
             int id = 0;
             while((line = myReader.readLine())!= null){
             String[] values  = line.split (",");

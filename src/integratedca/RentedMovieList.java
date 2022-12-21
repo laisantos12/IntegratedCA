@@ -24,6 +24,15 @@ public class RentedMovieList {
     public int numberOfMoviesRented() {
         return rentedMovies.size();
     }
+    
+    public double totalCostofRentals(RentedMovieList rentedMovieList, int numberOfMoviesRented){
+        double total= 0;
+        for(int i=0;i<numberOfMoviesRented;i++){
+            
+            total += Double.parseDouble(rentedMovies.get(i).getPrice());
+        }
+        return total;
+    }
 
     public void addMovieToRentedList(Movie movie) throws IOException {
 
